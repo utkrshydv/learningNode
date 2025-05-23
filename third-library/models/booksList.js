@@ -27,6 +27,12 @@ const bookItemSchema = new mongoose.Schema({
   isbn: {
     type: String, 
     required: true
+  }, 
+  rating: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 5
   }
 }, { timestamps: true});
 
