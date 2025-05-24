@@ -1,3 +1,5 @@
 
 # Ignore all node_modules folders in the entire repo
 **/node_modules
+**/.env
+
