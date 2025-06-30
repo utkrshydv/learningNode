@@ -4,6 +4,7 @@ const db = require('./db');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 const passport = require('./auth');
+require('dotenv').config()
 
 const logRequest = (req, res, next) => {
   console.log(`${new Date().toLocaleString()} request made to: ${req.originalUrl}`);
@@ -14,7 +15,7 @@ app.use(passport.initialize());
 
 const localAuthMiddleware = passport.authenticate('local', {session: false}) 
 
-app.get('/', logRequest, localAuthMiddleware, (req, res) => {
+app.get('/', logRequest, (req, res) => {
   res.send('Hello World')
 })
 
