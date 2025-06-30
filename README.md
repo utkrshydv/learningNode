@@ -127,6 +127,54 @@ Delete a book by its ISBN.
 
 ---
 
+
+## 🗳️ Project 4 → Voting App API
+
+A backend voting system where registered users (voters) can log in and vote for candidates. Admins can manage candidates. Built using Express, MongoDB, and JWT for secure authentication.
+
+### 🛠️ Technologies Used
+
+* Node.js
+* Express
+* MongoDB (Mongoose)
+* JSON Web Token (JWT)
+* bcrypt (for password hashing)
+
+### 🗂️ Project Structure
+
+```bash
+04-fourth-voting/
+├── db.js                  # MongoDB connection
+├── jwt.js                 # JWT utility functions
+├── models/
+│   ├── candidate.js       # Candidate schema
+│   └── user.js            # User schema with password hashing
+├── routes/
+│   ├── userRoutes.js      # Login and registration
+│   └── candidateRoutes.js # Candidate actions and voting logic
+└── server.js              # Main entry point (Express app + routes)
+```
+
+### 🔐 Features
+
+* **User Roles**: `voter` and `admin`
+* **Authentication**: Signup/login with hashed passwords
+* **Authorization**: JWT-protected routes
+* **Voting**: Voters can vote once; vote count is stored
+* **Admin Tools**: Add/edit/delete candidates
+
+### 🧠 What I Learned
+
+* Building token-based auth flows using JWT
+* Designing normalized MongoDB schemas using Mongoose
+* Password hashing and comparison using `bcrypt`
+* Managing protected routes and user roles
+* Structuring Express apps for scale
+
+---
+
+
+
 ## 🧩 Practice Problems
 
 A collection of JavaScript practice problems and small utilities.
